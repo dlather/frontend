@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Prism.js theme */
+@import 'prismjs/themes/prism-tomorrow.css';
+
+/* Additional global styles */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for code blocks */
+pre {
+  background-color: #2d2d2d !important;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem !important; /* 14px */
+  line-height: 1.5;
+}
+
+pre code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.875rem !important; /* 14px */
+  line-height: 1.5;
+}
+
+/* Override Prism.js styles for consistent sizing */
+pre[class*="language-"] {
+  font-size: 0.875rem !important; /* 14px */
+}
+
+code[class*="language-"] {
+  font-size: 0.875rem !important; /* 14px */
+}
+
+/* Inline code styling */
+:not(pre) > code {
+  font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Remove backticks from inline code */
+:not(pre) > code::before,
+:not(pre) > code::after {
+  content: none !important;
+}
+
+/* Blockquote styling with quote marks */
+blockquote {
+  position: relative;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  z-index: 1;
+}
+
+blockquote::before {
+  content: '\201C'; /* Opening quotation mark */
+  position: absolute;
+  left: 0;
+  top: -0.25rem;
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: #e5e7eb; /* gray-200 */
+  z-index: -1;
+  line-height: 1;
+}
+
+blockquote::after {
+  content: '\201D'; /* Closing quotation mark */
+  position: absolute;
+  right: 0.5rem;
+  bottom: -1rem;
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  color: #e5e7eb; /* gray-200 */
+  z-index: -1;
+  line-height: 1;
+}
+
+/* Basic markdown styling */
+.prose h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1rem;
+  margin-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: #3b82f6;
+  text-decoration: underline;
+} 

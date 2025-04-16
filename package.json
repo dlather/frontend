@@ -1,0 +1,18 @@
+{
+  "name": "frontend-docs",
+  "version": "1.0.0",
+  "description": "Frontend Concepts Documentation",
+  "scripts": {
+    "dev": "cd website && npm run dev",
+    "build": "cd website && npm run build",
+    "start": "cd website && npm run start"
+  },
+  "keywords": [
+    "frontend",
+    "documentation",
+    "javascript",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC"
+} 
